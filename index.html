@@ -5,6 +5,7 @@
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Akshay Portfolio</title>
+      
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
             rel="stylesheet" />
       <!-- Include Font Awesome -->
@@ -134,7 +135,7 @@
             }
 
             .secondSection {
-                  padding: 50px 10%;
+                  padding: 0px 10% 50px;
             }
 
             .box {
@@ -180,14 +181,10 @@
             .skill {
                   position: relative;
                   font-size: 40px;
+                  text-align: center;
                   cursor: pointer;
+                  width: 7rem;
             }
-/* 
-            .myImage{
-                  width: 250px;
-                  height: auto;
-                  border-radius: 50%;
-            } */
 
             /* Tooltip styling */
             .tooltip {
@@ -217,12 +214,6 @@
                   display: flex;
                   flex-wrap: wrap;
                   gap: 20px;
-            }
-
-            .skill {
-                  position: relative;
-                  text-align: center;
-                  cursor: pointer;
             }
 
             .skill img {
@@ -368,13 +359,16 @@
             }
 
             @media (max-width: 600px) {
+
+
                   nav {
                         flex-direction: column;
-                        text-align: center;
+                        justify-content: start;
+                        align-items: start;
+                        /* text-align: center; */
                   }
 
                   nav ul {
-                        flex-direction: column;
                         gap: 10px;
                         margin-top: 10px;
                   }
@@ -385,13 +379,7 @@
                   }
             }
 
-            .footer {
-                  background: #111;
-                  color: #fff;
-                  padding: 20px 0;
-                  margin-top: 40px;
-                  text-align: center;
-            }
+
 
 
             .footer .container {
@@ -410,11 +398,10 @@
 
             .social-icons {
                   display: flex;
-                  gap: 15px;
-
-
+                  justify-content: space-around;
+                  flex-wrap: wrap;
+                  gap: 10px;
             }
-
 
             .social-icons .icon {
                   color: #fff;
@@ -434,17 +421,6 @@
                   padding-bottom: 0px;
             }
 
-            /* Responsive */
-            @media (max-width: 600px) {
-                  .footer-content p {
-                        font-size: 14px;
-                  }
-
-                  .social-icons .icon {
-                        font-size: 18px;
-                  }
-            }
-
             .size-big {
                   font-size: 3rem;
                   margin-left: 1.5rem;
@@ -454,6 +430,55 @@
                   height: 0.5px;
                   font-weight: bold;
                   width: 35rem;
+            }
+
+            /* Responsive */
+            @media (max-width: 600px) {
+
+                  .firstsection {
+                        padding: 50px;
+                        ;
+                  }
+
+                  .secondSection {
+                        padding: 50px;
+                  }
+
+                  .skillsSection {
+                        padding: 50px;
+                  }
+
+                  .projectSection {
+                        padding: 50px;
+                  }
+
+                  .leftSection {
+                        font-size: 22px;
+                        font-weight: 400;
+                        width: 20rem;
+                  }
+
+                  .footer-hr {
+                        height: 0.5px;
+                        font-weight: bold;
+                        width: 25rem;
+                  }
+
+                  .footer {
+                        width: 30rem;
+                  }
+
+                  .footer-content p {
+                        font-size: 14px;
+                  }
+
+                  .social-icons .icon {
+                        font-size: 1rem;
+                  }
+
+                  /* .social-icons{
+                        justify-content: space-around;
+                  } */
             }
       </style>
 </head>
@@ -670,6 +695,20 @@
                               </div>
                         </div>
 
+                        <!-- Git Skill -->
+                        <div class="skill">
+                              <img src="Images/git.svg" alt="Jira">
+                              <span class="tooltip">Git: </span>
+                              <div class="doc">
+                                    <p><strong>Git: </strong>A version control system that tracks changes in your code
+                                          and helps developers collaborate efficiently.
+
+
+                                    </p>
+                                    <a href="https://git-scm.com/docs" target="_blank" rel="noopener noreferrer">Read
+                                          More</a>
+                              </div>
+                        </div>
                         <!-- JIRA Skill -->
                         <div class="skill">
                               <img src="Images/jira.png" alt="Jira">
@@ -838,6 +877,7 @@
                               </a>
 
                         </div>
+
                         <hr class="footer-hr">
                   </div>
                   <p class="copy-right-2025">© 2025 <strong>AkshayPortfolio.com</strong> | All Rights Reserved</p>
