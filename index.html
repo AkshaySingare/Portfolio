@@ -480,6 +480,178 @@
                         font-size: 1rem;
                   }
             }
+            /* ================================
+   GLOBAL RESPONSIVE FIXES
+================================ */
+
+/* Prevent horizontal scroll */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Images responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Remove fixed footer width problem */
+.footer {
+    width: 100% !important;
+}
+
+/* Navigation fix */
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+        width: 100% !important;
+    }
+
+    nav ul {
+        margin: 10px 0 0 0;
+        padding: 0;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    nav ul li a {
+        font-size: 15px;
+    }
+}
+
+/* Hero section layout */
+@media (max-width: 768px) {
+
+    .firstsection {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    .leftSection {
+        width: 100% !important;
+        font-size: 18px;
+    }
+
+    .rightSection img {
+        width: 220px;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .btn {
+        width: 200px;
+    }
+}
+
+/* Education cards */
+@media (max-width: 768px) {
+
+    .secondSection {
+        padding: 30px 20px;
+    }
+
+    .box {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Skills section */
+@media (max-width: 768px) {
+
+    .skillsSection {
+        padding: 30px 20px;
+    }
+
+    .skills-box {
+        justify-content: center;
+    }
+
+    .skill {
+        width: 80px;
+    }
+
+    .doc {
+        width: 240px;
+    }
+}
+
+/* Projects section */
+@media (max-width: 768px) {
+
+    .projectSection {
+        padding: 30px 20px;
+    }
+
+    .projectSection .vertical {
+        padding: 15px;
+    }
+
+    .projectSection h2 {
+        font-size: 18px;
+    }
+
+    .projectSection p, 
+    .projectSection li {
+        font-size: 14px;
+    }
+}
+
+/* Footer fixes */
+@media (max-width: 768px) {
+
+    .footer-hr {
+        width: 90%;
+    }
+
+    .size-big {
+        font-size: 2rem;
+        margin-left: 0.5rem;
+    }
+
+    .social-icons {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .copy-right-2025 {
+        font-size: 13px;
+        margin-top: 10px;
+    }
+}
+
+/* Extra small phones */
+@media (max-width: 480px) {
+
+    .leftSection {
+        font-size: 16px;
+    }
+
+    .rightSection img {
+        width: 180px;
+    }
+
+    nav .left {
+        font-size: 18px;
+    }
+
+    .btn {
+        width: 180px;
+        font-size: 14px;
+    }
+}
+
       </style>
 </head>
 
