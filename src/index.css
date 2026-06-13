@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-[#050816] text-slate-100 font-sans overflow-x-hidden;
+    background-image:
+      radial-gradient(circle at 20% 20%, rgba(56, 189, 248, 0.08), transparent 22%),
+      radial-gradient(circle at 80% 0%, rgba(99, 102, 241, 0.1), transparent 20%),
+      linear-gradient(180deg, #050816 0%, #0a1020 55%, #050816 100%);
+  }
+
+  * {
+    @apply border-white/10;
+  }
+
+  ::selection {
+    background: rgba(56, 189, 248, 0.28);
+    color: white;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply border border-white/10 bg-white/5 backdrop-blur-xl shadow-glow;
+  }
+
+  .section-shell {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-title {
+    @apply text-3xl font-semibold tracking-tight text-white sm:text-4xl;
+  }
+
+  .section-subtitle {
+    @apply mt-3 max-w-2xl text-sm leading-6 text-slate-300 sm:text-base;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-cyan-300 via-sky-400 to-indigo-300 bg-clip-text text-transparent;
+  }
+
+  .glow-button {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold transition duration-300;
+  }
+
+  .glow-button-primary {
+    @apply glow-button bg-gradient-to-r from-cyan-400 via-sky-500 to-indigo-500 text-slate-950 shadow-[0_10px_35px_rgba(56,189,248,0.25)] hover:scale-[1.02];
+  }
+
+  .glow-button-secondary {
+    @apply glow-button border border-white/10 bg-white/5 text-white hover:border-cyan-400/40 hover:bg-white/10;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-slate-200;
+  }
+}
