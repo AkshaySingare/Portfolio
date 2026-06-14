@@ -299,7 +299,7 @@ function App() {
       <main id="home" className="relative">
         <Hero />
 
-        <Section id="about" eyebrow="About" title="Built for product teams, client work, and real delivery." description="I’m Akshay Singare, a BCA graduate and Full Stack Developer focused on building reliable web applications with clean architecture, secure authentication, and polished user experiences. My work blends Java, Spring Boot, Node.js, Next.js, MySQL, and VPS deployment so the product is ready beyond the prototype stage.">
+        <Section id="about" eyebrow="About" title="Building production-ready software with depth and ownership." description="I’m Akshay Singare, a BCA graduate and Software Engineer at Veagle Space. I build reliable, secure, and scalable web applications using Java, Spring Boot, Node.js, Next.js, MySQL, and VPS deployment — from initial development through production maintenance.">
           <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {profileHighlights.map((item) => (
               <motion.div
@@ -364,7 +364,7 @@ function App() {
           </div>
         </Section>
 
-        <Section id="contact" eyebrow="Contact" title="Let’s build something that feels production-ready from day one." description="Clear contact pathways, direct links, and copy actions make it easy for recruiters or hiring managers to reach out immediately.">
+        <Section id="contact" eyebrow="Contact" title="Let’s connect and build something great together." description="Feel free to reach out for full-time opportunities, collaborations, or project inquiries. I’m always open to meaningful conversations.">
           <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
             <div className="glass-card rounded-[2rem] p-6 sm:p-8">
               <div className="flex flex-col gap-6">
