@@ -35,7 +35,7 @@ const navItems = [
 const stats = [
   { value: "2+", label: "Live client systems delivered" },
   { value: "5+", label: "Core technologies mastered" },
-  { value: "Production", label: "Deployment-ready mindset" },
+  { value: "Full-Time", label: "Software Engineer at Veagle Space" },
 ];
 
 const profileHighlights = [
@@ -44,7 +44,7 @@ const profileHighlights = [
   "Java Developer",
   "Spring Boot Developer",
   "Node.js Developer",
-  "Next.js Developer",
+  "DevOps",
 ];
 
 const skillCategories: SkillCategory[] = [
@@ -91,17 +91,31 @@ const skillCategories: SkillCategory[] = [
 
 const timeline: TimelineEntry[] = [
   {
-    role: "Full Stack Developer Intern",
+    role: "Software Engineer",
     company: "Veagle Space",
-    duration: "Production experience",
+    duration: "Current · Full-Time",
     description:
-      "Built and supported enterprise web applications with a strong focus on reliability, security, and deployment quality.",
+      "Working as a full-time Software Engineer, leading development of production-grade web applications, backend APIs, and deployment infrastructure.",
     bullets: [
-      "Developed REST APIs using Spring Boot for production workflows.",
-      "Implemented Spring Security authentication and role-based access patterns.",
-      "Worked with MySQL data models and optimized backend integration flows.",
-      "Connected Spring Boot services with a Next.js frontend.",
-      "Participated in deployment, maintenance, and production support tasks.",
+      "Designing and developing scalable REST APIs using Spring Boot.",
+      "Implementing Spring Security with JWT-based authentication and role-based access control.",
+      "Managing MySQL database schemas, queries, and production data integrity.",
+      "Building and maintaining full-stack features across Spring Boot and Next.js.",
+      "Handling VPS deployment, SSH configuration, domain setup, and server maintenance.",
+      "Collaborating on production releases, hotfixes, and performance improvements.",
+    ],
+  },
+  {
+    role: "Full Stack Developer Intern",
+    company: "Creazione Software",
+    duration: "Internship",
+    description:
+      "Gained hands-on experience building web applications and working with full-stack technologies during a structured internship program.",
+    bullets: [
+      "Developed web application features using Java and frontend technologies.",
+      "Worked with relational databases and performed CRUD operations.",
+      "Collaborated with the team on requirement analysis and feature delivery.",
+      "Learned industry-standard development workflows and version control practices.",
     ],
   },
 ];
@@ -154,13 +168,30 @@ const academicProjects = [
 ];
 
 const achievements = [
-  "Developed real client projects.",
-  "Experience with Spring Boot ecosystem.",
-  "Experience with Node.js ecosystem.",
-  "Managed production databases.",
-  "Worked on VPS deployments.",
-  "Built secure authentication systems.",
-  "Developed scalable web applications.",
+  {
+    title: "Production Deployment",
+    detail: "Deployed and maintained live applications on Hostinger VPS with SSH, domain configuration, and server management.",
+  },
+  {
+    title: "Secure Authentication Systems",
+    detail: "Implemented JWT and Spring Security-based authentication with role-based access control across multiple production projects.",
+  },
+  {
+    title: "Full Stack Delivery",
+    detail: "Delivered complete, end-to-end web applications covering backend APIs, frontend UI, database design, and deployment.",
+  },
+  {
+    title: "REST API Development",
+    detail: "Designed and built RESTful APIs using Spring Boot and Node.js/Express.js serving real client workloads.",
+  },
+  {
+    title: "Database Management",
+    detail: "Managed MySQL production databases including schema design, query optimization, and data integrity maintenance.",
+  },
+  {
+    title: "Client Project Experience",
+    detail: "Worked on real client projects at Veagle Space and Creazione Software, delivering features under production constraints.",
+  },
 ];
 
 const socialLinks = [
@@ -290,7 +321,7 @@ function App() {
           </div>
         </Section>
 
-        <Section id="experience" eyebrow="Experience" title="Production work that looks and feels like real software delivery." description="My internship at Veagle Space gave me hands-on exposure to enterprise workflows, secure APIs, and production maintenance.">
+        <Section id="experience" eyebrow="Experience" title="Real-world software engineering across internship and full-time roles." description="From my internship at Creazione Software to my current full-time position as Software Engineer at Veagle Space, I have built and shipped production systems end-to-end.">
           <div className="space-y-6">
             {timeline.map((entry, index) => (
               <TimelineCard key={entry.role} entry={entry} index={index} />
@@ -298,7 +329,7 @@ function App() {
           </div>
         </Section>
 
-        <Section id="projects" eyebrow="Projects" title="Real client projects with deployed outcomes." description="These projects are the most convincing proof of capability for recruiters because they show production work, not just demos.">
+        <Section id="projects" eyebrow="Projects" title="Real client projects with deployed, production outcomes." description="Production-grade applications built and maintained for actual clients — covering full-stack development, secure authentication, database management, and VPS deployment.">
           <div className="grid gap-6 xl:grid-cols-2">
             {projects.map((project, index) => (
               <ProjectCard key={project.title} project={project} index={index} />
@@ -312,11 +343,11 @@ function App() {
           </div>
         </Section>
 
-        <Section id="achievements" eyebrow="Achievements" title="What employers will notice first." description="These points are intentionally written to match the language recruiters and hiring managers care about.">
+        <Section id="achievements" eyebrow="Achievements" title="Key technical achievements and capabilities." description="Highlights of meaningful technical work delivered across internship and professional software engineering roles.">
           <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {achievements.map((item, index) => (
               <motion.div
-                key={item}
+                key={item.title}
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.35 }}
@@ -326,7 +357,8 @@ function App() {
                 <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-400/20 to-indigo-500/20 text-cyan-200">
                   {index + 1}
                 </div>
-                <p className="text-sm leading-6 text-slate-200">{item}</p>
+                <p className="mb-2 text-base font-semibold text-white">{item.title}</p>
+                <p className="text-sm leading-6 text-slate-300">{item.detail}</p>
               </motion.div>
             ))}
           </div>
@@ -341,7 +373,7 @@ function App() {
                     Akshay Singare
                   </p>
                   <h3 className="mt-3 text-2xl font-semibold text-white sm:text-3xl">
-                    Full Stack Developer focused on secure backend systems and polished interfaces.
+                    Software Engineer building secure, scalable, and production-ready web applications.
                   </h3>
                 </div>
 
@@ -359,7 +391,11 @@ function App() {
                   <a href="/Images/AKSHAY-Resume.pdf" className="glow-button-primary" target="_blank" rel="noreferrer">
                     Download Resume
                   </a>
-                  <a href="mailto:singareakshay937@gmail.com" className="glow-button-secondary">
+                  <a
+                    href="mailto:singareakshay937@gmail.com"
+                    className="glow-button-secondary"
+                    onClick={(e) => { e.preventDefault(); window.location.href = "mailto:singareakshay937@gmail.com"; }}
+                  >
                     Send Email
                   </a>
                 </div>
@@ -435,9 +471,9 @@ function Hero() {
           </h1>
 
           <p className="mt-6 max-w-2xl text-base leading-7 text-slate-300 sm:text-lg">
-            BCA Graduate and Full Stack Developer experienced in Java Spring Boot, Node.js,
-            Next.js, MySQL, and modern web technologies. Passionate about building secure,
-            scalable, and user-friendly applications.
+            BCA Graduate and Software Engineer at Veagle Space. Experienced in Java, Spring Boot,
+            Node.js, Next.js, MySQL, and VPS deployment. Passionate about building secure,
+            scalable, and production-ready web applications.
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -506,7 +542,7 @@ function Hero() {
                 <div className="relative overflow-hidden rounded-[1.6rem] border border-white/10 bg-gradient-to-b from-white/10 to-white/5 p-3">
                   <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.06),transparent_40%)]" />
                   <img
-                    src="/Images/foto.jpeg"
+                    src={`${import.meta.env.BASE_URL}Images/foto.jpeg`}
                     alt="Akshay Singare portrait"
                     className="relative h-full min-h-[360px] w-full rounded-[1.35rem] object-cover object-top shadow-2xl"
                   />
@@ -518,11 +554,11 @@ function Hero() {
                     transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
                     className="glass-card rounded-2xl p-4"
                   >
-                    <p className="text-xs uppercase tracking-[0.28em] text-slate-400">Primary stack</p>
+                    <p className="text-xs uppercase tracking-[0.28em] text-slate-400">Primary Stack</p>
                     <p className="mt-2 text-lg font-semibold text-white">Spring Boot, Node.js, Next.js</p>
                     <p className="mt-2 text-sm leading-6 text-slate-300">
-                      Production-minded full stack delivery with authentication, APIs, database design,
-                      and deployment responsibility.
+                      Full-stack software engineering with authentication, REST APIs, database design,
+                      and end-to-end deployment ownership.
                     </p>
                   </motion.div>
 
