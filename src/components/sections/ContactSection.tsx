@@ -49,7 +49,9 @@ export const ContactSection: React.FC = () => {
   return (
     <section id="contact" className="py-12 md:py-20 px-4 sm:px-6 lg:px-8 relative">
       {/* Background ambient orbs */}
-      <div className="orb-glow w-96 h-96 bg-emerald-500/10 bottom-0 left-1/4 pointer-events-none" />
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="orb-glow w-96 h-96 bg-emerald-500/10 bottom-0 left-1/4" />
+      </div>
 
       <div className="max-w-7xl mx-auto">
         <SectionHeader

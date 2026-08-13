@@ -2,7 +2,7 @@ import { Experience, Project, SkillCategory, EducationItem, SocialLink, Architec
 
 export const personalInfo = {
   name: "Akshay Singare",
-  headline: "Java Developer & Backend Engineer",
+  headline: "Java Developer & Software Developer",
   subHeadline: "Building secure, high-throughput backend systems & deploying production infrastructure with Spring Boot, MySQL, and Linux VPS.",
   bio: "Java Developer with 11 months of hands-on experience building secure, scalable backend architectures using Java, Spring Boot, Spring Security, and Hibernate (JPA) with MySQL. Skilled in designing RESTful APIs, relational database schemas, and transactional business logic. Experienced with Linux server administration, Nginx reverse proxies, GitHub Actions CI/CD, and production deployment on VPS. Comfortable working across the stack with Next.js and React when needed, with an uncompromised focus on clean architecture and maintainable systems.",
   email: "akshaysingare.dev@gmail.com",
@@ -15,6 +15,7 @@ export const personalInfo = {
   profileImage: "/Images/myImage.jpeg",
   alternateImage: "/Images/foto.jpeg",
   roles: [
+    "Software Developer",
     "Java Backend Developer",
     "Spring Boot Specialist",
     "Deployment & DevOps Engineer",

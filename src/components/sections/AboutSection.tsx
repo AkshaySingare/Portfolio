@@ -122,9 +122,9 @@ export const AboutSection: React.FC = () => {
             className="lg:col-span-6 space-y-4 flex flex-col h-full min-h-[500px]"
           >
             {/* Developer Terminal Emulator */}
-            <div className="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 text-sm font-medium shadow-[0_0_20px_rgba(16,185,129,0.15)] w-full">
-              <Terminal className="w-4 h-4 text-emerald-400 shrink-0" />
-              <span>If you don't get any info about me, type a command and see info about me!</span>
+            <div className="flex flex-col sm:flex-row items-center gap-2.5 px-4 py-2.5 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 text-sm font-medium shadow-[0_0_20px_rgba(16,185,129,0.15)] w-full text-center sm:text-left h-auto">
+              <Terminal className="w-4 h-4 text-emerald-400 shrink-0 hidden sm:block" />
+              <span className="break-words max-w-full">If you don't get any info about me, type a command and see info about me!</span>
             </div>
             <div className="flex-1 w-full relative">
               <div className="absolute inset-0">

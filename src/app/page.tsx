@@ -11,7 +11,7 @@ import { ContactSection } from "@/components/sections/ContactSection";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#080C14] text-slate-100 selection:bg-emerald-500/20 selection:text-emerald-300">
+    <div className="min-h-screen w-full overflow-x-hidden bg-[#080C14] text-slate-100 selection:bg-emerald-500/20 selection:text-emerald-300">
       {/* Top Navbar */}
       <Navbar />
 

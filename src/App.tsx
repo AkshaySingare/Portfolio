@@ -251,7 +251,7 @@ function App() {
   };
 
   return (
-    <div className="relative min-h-screen bg-transparent text-white">
+    <div className="relative min-h-screen w-full overflow-x-hidden bg-transparent text-white">
       <AnimatePresence>
         {isLoading ? <Loader key="loader" /> : null}
       </AnimatePresence>
@@ -428,7 +428,7 @@ function App() {
       </main>
 
       <footer className="border-t border-white/10 bg-black/20">
-        <div className="section-shell flex flex-col gap-3 py-8 text-sm text-slate-400 md:flex-row md:items-center md:justify-between">
+        <div className="section-shell flex flex-col items-center text-center gap-3 py-8 text-sm text-slate-400 md:flex-row md:justify-between md:text-left">
           <p>© {currentYear} Akshay Singare. All rights reserved.</p>
           <p>React • TypeScript • Tailwind CSS • Framer Motion • GitHub Pages</p>
         </div>
@@ -458,7 +458,7 @@ function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="relative z-10"
+          className="relative z-10 flex flex-col items-center text-center lg:items-start lg:text-left"
         >
           <div className="chip w-fit">
             <span className="h-2 w-2 rounded-full bg-cyan-300" />
@@ -476,16 +476,16 @@ function Hero() {
             scalable, and production-ready web applications.
           </p>
 
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <a href="/Images/AKSHAY-Resume.pdf" target="_blank" rel="noreferrer" className="glow-button-primary">
+          <div className="mt-8 flex w-full flex-col gap-3 sm:w-auto sm:flex-row justify-center lg:justify-start">
+            <a href="/Images/AKSHAY-Resume.pdf" target="_blank" rel="noreferrer" className="glow-button-primary w-full sm:w-auto text-center justify-center">
               Download Resume
             </a>
-            <a href="#contact" className="glow-button-secondary">
+            <a href="#contact" className="glow-button-secondary w-full sm:w-auto text-center justify-center">
               Contact Me
             </a>
           </div>
 
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="mt-8 flex flex-wrap justify-center lg:justify-start gap-3">
             {profileHighlights.slice(1, 5).map((item) => (
               <span key={item} className="chip">
                 {item}
@@ -617,7 +617,7 @@ function Section({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.25 }}
           transition={{ duration: 0.7 }}
-          className="mb-8 max-w-3xl"
+          className="mb-8 max-w-3xl mx-auto flex flex-col items-center text-center md:mx-0 md:items-start md:text-left"
         >
           <p className="text-xs font-semibold uppercase tracking-[0.4em] text-cyan-200/80">
             {eyebrow}
@@ -684,7 +684,7 @@ function TimelineCard({ entry, index }: { entry: TimelineEntry; index: number })
     >
       <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(56,189,248,0.08),transparent_42%),linear-gradient(225deg,rgba(99,102,241,0.08),transparent_40%)]" />
       <div className="relative grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
-        <div>
+        <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
           <div className="chip w-fit">
             <span className="h-2 w-2 rounded-full bg-cyan-300" />
             {entry.duration}
@@ -722,8 +722,8 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       <div className={`absolute inset-0 bg-gradient-to-br ${project.accent} opacity-70`} />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.08),transparent_28%)] opacity-0 transition duration-500 group-hover:opacity-100" />
 
-      <div className="relative">
-        <div className="flex flex-wrap items-center gap-2">
+      <div className="relative flex flex-col items-center text-center sm:items-start sm:text-left">
+        <div className="flex flex-wrap justify-center sm:justify-start items-center gap-2">
           {project.stack.map((item) => (
             <span key={item} className="chip bg-black/20 text-white">
               {item}
@@ -734,24 +734,24 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
         <h3 className="mt-5 text-2xl font-semibold text-white">{project.title}</h3>
         <p className="mt-3 text-sm leading-6 text-slate-200">{project.description}</p>
 
-        <div className="mt-5 grid gap-2 sm:grid-cols-2">
+        <div className="mt-5 grid w-full gap-2 sm:grid-cols-2 text-left">
           {project.highlights.map((item) => (
-            <div key={item} className="rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-slate-100">
+            <div key={item} className="rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-slate-100 text-center sm:text-left">
               {item}
             </div>
           ))}
         </div>
 
-        <div className="mt-6 flex flex-wrap items-center gap-3">
+        <div className="mt-6 flex flex-col sm:flex-row w-full sm:w-auto flex-wrap items-center gap-3">
           <a
             href={project.website}
             target="_blank"
             rel="noreferrer"
-            className="glow-button-primary"
+            className="glow-button-primary w-full sm:w-auto text-center justify-center"
           >
             Visit Live Site
           </a>
-          <span className="text-sm text-slate-200/80">
+          <span className="text-sm text-slate-200/80 text-center sm:text-left">
             Designed for production, deployment, and recruiter confidence.
           </span>
         </div>

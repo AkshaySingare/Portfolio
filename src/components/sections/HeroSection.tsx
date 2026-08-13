@@ -20,9 +20,11 @@ export const HeroSection: React.FC = () => {
   return (
     <section className="relative min-h-[92vh] flex items-center justify-center pt-28 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
       {/* Background ambient gradient orbs */}
-      <div className="orb-glow w-[500px] h-[500px] bg-emerald-500/15 top-10 -left-48" />
-      <div className="orb-glow w-[450px] h-[450px] bg-cyan-500/15 bottom-10 -right-48" />
-      <div className="orb-glow w-[350px] h-[350px] bg-violet-600/10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="orb-glow w-[500px] h-[500px] bg-emerald-500/15 top-10 -left-48" />
+        <div className="orb-glow w-[450px] h-[450px] bg-cyan-500/15 bottom-10 -right-48" />
+        <div className="orb-glow w-[350px] h-[350px] bg-violet-600/10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+      </div>
 
       {/* Grid overlay */}
       <div className="absolute inset-0 bg-grid-pattern opacity-60 pointer-events-none" />
@@ -37,13 +39,13 @@ export const HeroSection: React.FC = () => {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900/80 border border-emerald-500/30 backdrop-blur-md text-xs font-mono text-emerald-300 shadow-sm"
+              className="inline-flex items-center justify-center gap-2 px-4 py-2 sm:py-1.5 rounded-2xl sm:rounded-full bg-slate-900/80 border border-emerald-500/30 backdrop-blur-md text-[11px] sm:text-xs font-mono text-emerald-300 shadow-sm max-w-[90vw] mx-auto flex-wrap text-center"
             >
-              <span className="relative flex h-2.5 w-2.5">
+              <span className="relative flex h-2.5 w-2.5 shrink-0">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
               </span>
-              <span>Java Developer • Spring Boot & Linux VPS Specialist</span>
+              <span className="break-words max-w-full">Java Developer • Spring Boot & Linux VPS Specialist</span>
             </motion.div>
 
             {/* Main Headline */}
@@ -56,8 +58,8 @@ export const HeroSection: React.FC = () => {
               <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.1]">
                 Hi, I'm <span className="text-gradient-emerald">{personalInfo.name}</span>
               </h1>
-              <div className="h-10 sm:h-12 flex items-center justify-center lg:justify-start overflow-hidden">
-                <span className="text-xl sm:text-2xl lg:text-3xl font-semibold text-slate-300 font-mono">
+              <div className="min-h-10 sm:min-h-12 flex items-center justify-center lg:justify-start w-full">
+                <span className="text-lg sm:text-2xl lg:text-3xl font-semibold text-slate-300 font-mono text-center lg:text-left break-words max-w-[90vw]">
                   {"> "}{personalInfo.roles[roleIndex]}
                 </span>
               </div>

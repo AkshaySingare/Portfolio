@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { personalInfo, socialLinks } from "@/data/portfolioData";
@@ -14,6 +14,13 @@ const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
   display: "swap",
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://akshaysingare.dev"),
@@ -126,7 +133,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className="dark scroll-smooth">
+    <html lang="en" className="dark scroll-smooth overflow-x-hidden w-full">
       <head>
         <script
           type="application/ld+json"
@@ -134,9 +141,11 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${inter.variable} ${jetbrainsMono.variable} antialiased bg-[#080C14] text-slate-100 min-h-screen selection:bg-emerald-500/20 selection:text-emerald-300 relative overflow-x-hidden`}
+        className={`${inter.variable} ${jetbrainsMono.variable} antialiased bg-[#080C14] text-slate-100 min-h-screen selection:bg-emerald-500/20 selection:text-emerald-300 relative overflow-x-hidden w-full max-w-[100vw]`}
       >
-        {children}
+        <div className="flex flex-col min-h-screen w-full max-w-[100vw] overflow-x-hidden">
+          {children}
+        </div>
       </body>
     </html>
   );
