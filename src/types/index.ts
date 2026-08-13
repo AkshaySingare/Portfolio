@@ -37,7 +37,7 @@ export interface Experience {
   company: string;
   location: string;
   period: string;
-  type: "Full-Time" | "Internship" | "Contract / Freelance";
+  type: "Full-Time" | "Internship" | "Contract / Freelance" | "Self-Employed";
   technologies: string[];
   summary: string;
   bullets: string[];
