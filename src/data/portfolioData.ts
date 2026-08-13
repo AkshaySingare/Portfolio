@@ -11,7 +11,7 @@ export const personalInfo = {
   timezone: "IST (UTC+5:30)",
   availability: "Open for Full-Time & Contract Opportunities",
   yearsExperience: "11+ Months",
-  resumePath: "/Images/AKSHAY-Resume.pdf?v=2",
+  resumePath: "/Images/AKSHAY-Resume.pdf?v=3",
   profileImage: "/Images/myImage.jpeg",
   alternateImage: "/Images/foto.jpeg",
   roles: [
