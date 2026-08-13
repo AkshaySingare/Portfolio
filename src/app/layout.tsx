@@ -134,7 +134,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${inter.variable} ${jetbrainsMono.variable} antialiased bg-[#080C14] text-slate-100 min-h-screen selection:bg-emerald-500/20 selection:text-emerald-300 relative`}
+        className={`${inter.variable} ${jetbrainsMono.variable} antialiased bg-[#080C14] text-slate-100 min-h-screen selection:bg-emerald-500/20 selection:text-emerald-300 relative overflow-x-hidden`}
       >
         {children}
       </body>

@@ -170,7 +170,7 @@ export const InteractiveTerminal: React.FC = () => {
       </div>
 
       {/* Terminal Body */}
-      <div className="flex-1 p-4 sm:p-5 overflow-y-auto space-y-4 text-xs sm:text-sm">
+      <div className="flex-1 p-4 sm:p-5 overflow-y-auto overflow-x-auto space-y-4 text-xs sm:text-sm">
         {history.map((item, index) => (
           <div key={index} className="space-y-1.5">
             <div className="flex items-center gap-2 text-slate-400">
